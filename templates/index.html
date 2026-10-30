@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#030805">
+  <meta name="description" content="CodeBox Pro - مساعدك الذكي وأدوات المطورين في مكان واحد.">
+  <title>CodeBox Pro | أدوات المطور</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <script src="{{ url_for('static', filename='js/app.js') }}" defer></script>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="/" aria-label="CodeBox Pro - الرئيسية">
+        <span class="brand-mark">CB</span>
+        <span class="brand-name">CODEBOX<span> PRO</span><small>DEVELOPER TOOLKIT</small></span>
+      </a>
+      <p class="sidebar-label">القائمة الرئيسية</p>
+      <nav class="side-nav" aria-label="التنقل الرئيسي">
+        <button class="nav-item active" data-view="home"><span>⌂</span>الرئيسية</button>
+        <button class="nav-item" data-view="assistant"><span>✦</span>المساعد الذكي</button>
+        <button class="nav-item" data-view="generator"><span>⌘</span>مولّد الأكواد</button>
+        <button class="nav-item" data-view="developer"><span>{ }</span>أدوات المطور</button>
+        <button class="nav-item" data-view="python"><span>Py</span>أدوات Python</button>
+        <button class="nav-item" data-view="text"><span>¶</span>أدوات النصوص</button>
+        <button class="nav-item" data-view="calculator"><span>±</span>الآلة الحاسبة</button>
+        <button class="nav-item" data-view="converter"><span>⇄</span>محوّل الوحدات</button>
+        <button class="nav-item" data-view="colors"><span>◉</span>مزج الألوان</button>
+        <button class="nav-item" data-view="password"><span>⌑</span>كلمات المرور</button>
+      </nav>
+      <div class="sidebar-bottom">
+        <span class="online-dot"></span>
+        <div><strong>CodeBox Pro</strong><small>أدواتك جاهزة للاستخدام</small></div>
+        <span class="status-pill">LOCAL</span>
+      </div>
+    </aside>
+
+    <main class="main-area">
+      <header class="topbar">
+        <button class="mobile-menu btn btn-ghost" id="menuToggle" type="button" aria-label="فتح القائمة">☰</button>
+        <div class="breadcrumbs"><span>CodeBox Pro</span><b>/</b><strong id="breadcrumbTitle">الرئيسية</strong></div>
+        <div class="topbar-right"><span class="live-indicator"></span><span>مساحة عمل المطور</span><span class="avatar">CB</span></div>
+      </header>
+
+      <div class="content-wrap">
+        <section class="view active" id="view-home">
+          <div class="hero-panel">
+            <div class="hero-copy">
+              <div class="eyebrow"><span class="pulse"></span> CODEBOX PRO · DEVELOPER TOOLKIT</div>
+              <h1>كل أدواتك البرمجية<br><span>في مكان واحد</span></h1>
+              <p>اسأل المساعد الذكي، أنشئ الأكواد، واستخدم أدوات المطور اليومية من مساحة عمل واحدة.</p>
+              <div class="hero-buttons">
+                <button class="btn btn-primary" data-view="assistant" type="button">ابدأ محادثة ✦</button>
+                <button class="btn btn-ghost" data-scroll-tools type="button">استكشف الأدوات</button>
+              </div>
+              <div class="hero-meta">مساعد ذكي <b>·</b> أدوات عملية <b>·</b> واجهة عربية</div>
+            </div>
+            <div class="hero-visual" aria-hidden="true">
+              <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+              <div class="core-symbol">CB</div>
+              <span class="float-chip chip-ai">AI ASSISTANT</span>
+              <span class="float-chip chip-python">PYTHON</span>
+              <span class="float-chip chip-ready"><span class="online-dot"></span> READY</span>
+            </div>
+          </div>
+          <div class="stats-grid">
+            <div class="stat-card"><span class="stat-icon">✦</span><div><strong>AI <em>ASSISTANT</em></strong><small>مساعدة برمجية ذكية</small></div></div>
+            <div class="stat-card"><span class="stat-icon">{ }</span><div><strong>DEV <em>TOOLS</em></strong><small>أدوات يومية للمطور</small></div></div>
+            <div class="stat-card"><span class="stat-icon">⌘</span><div><strong>CODE <em>GENERATOR</em></strong><small>أنشئ الكود حسب طلبك</small></div></div>
+          </div>
+          <div class="section-heading" id="toolGallery">
+            <div><div class="eyebrow">TOOLBOX</div><h2>أدوات <span>CodeBox</span></h2><p>اختر الأداة التي تحتاجها وابدأ مباشرة.</p></div>
+          </div>
+          <div class="tool-grid">
+            <button class="tool-card" data-view="assistant" type="button"><span class="tool-icon">✦</span><span class="tool-tag">AI</span><h3>المساعد الذكي</h3><p>اسأل عن البرمجة والتقنية واحصل على شرح عملي.</p><span class="tool-open">افتح الأداة ←</span></button>
+            <button class="tool-card" data-view="generator" type="button"><span class="tool-icon">{ }</span><span class="tool-tag">AI</span><h3>مولّد الأكواد</h3><p>حوّل وصفك إلى كود باللغة التي تختارها.</p><span class="tool-open">افتح الأداة ←</span></button>
+            <button class="tool-card" data-view="developer" type="button"><span class="tool-icon">⌘</span><span class="tool-tag">JSON</span><h3>أدوات المطور</h3><p>نسّق JSON أو اضغطه وتحقق من صحته.</p><span class="tool-open">افتح الأداة ←</span></button>
+            <button class="tool-card" data-view="python" type="button"><span class="tool-icon">Py</span><span class="tool-tag">PYTHON</span><h3>فاحص Python</h3><p>اعرض ملخصًا سريعًا عن بنية ملف Python.</p><span class="tool-open">افتح الأداة ←</span></button>
+            <button class="tool-card" data-view="text" type="button"><span class="tool-icon">¶</span><span class="tool-tag">TEXT</span><h3>أدوات النصوص</h3><p>احسب الكلمات والأسطر وغيّر حالة الأحرف.</p><span class="tool-open">افتح الأداة ←</span></button>
+            <button class="tool-card" data-view="calculator" type="button"><span class="tool-icon">±</span><span class="tool-tag">MATH</span><h3>الآلة الحاسبة</h3><p>نفّذ العمليات الحسابية بأمان.</p><span class="tool-open">افتح الأداة ←</span></button>
+            <button class="tool-card" data-view="converter" type="button"><span class="tool-icon">⇄</span><span class="tool-tag">UNITS</span><h3>محوّل الوحدات</h3><p>حوّل الطول والوزن ودرجات الحرارة.</p><span class="tool-open">افتح الأداة ←</span></button>
+            <button class="tool-card" data-view="colors" type="button"><span class="tool-icon">◉</span><span class="tool-tag">COLOR</span><h3>مزج الألوان</h3><p>اعرض اللون الناتج وقيم HEX وRGB.</p><span class="tool-open">افتح الأداة ←</span></button>
+            <button class="tool-card" data-view="password" type="button"><span class="tool-icon">⌑</span><span class="tool-tag">SECURE</span><h3>مولّد كلمات المرور</h3><p>أنشئ كلمة مرور عشوائية للاستخدام.</p><span class="tool-open">افتح الأداة ←</span></button>
+          </div>
+        </section>
+
+        <section class="view" id="view-assistant">
+          <div class="page-heading"><span class="page-icon">✦</span><div><div class="eyebrow">AI ASSISTANT</div><h1>المساعد الذكي</h1><p>اسأل عن البرمجة أو التقنية باللغة العربية أو الإنجليزية.</p></div></div>
+          <div class="workspace">
+            <div class="workspace-top"><div><strong>محادثة جديدة</strong><small><span class="online-dot"></span> جاهز للمساعدة</small></div><button class="btn btn-ghost btn-small" id="clearChat" type="button">مسح المحادثة</button></div>
+            <div class="chat-messages" id="chatMessages" aria-live="polite">
+              <div class="message assistant-message"><div class="message-avatar">✦</div><div class="message-body"><strong>CodeBox AI</strong><p>أهلًا بك! اسألني عن البرمجة أو أرسل مشكلة تريد حلها.</p></div></div>
+            </div>
+            <form class="chat-form" id="chatForm">
+              <textarea id="chatInput" rows="2" maxlength="20000" placeholder="اكتب رسالتك هنا..." aria-label="رسالتك" required></textarea>
+              <button class="btn btn-primary" id="chatSend" type="submit">إرسال ↗</button>
+            </form>
+            <p class="form-footnote">لا تشارك كلمات المرور أو المعلومات السرية في المحادثة.</p>
+          </div>
+        </section>
+
+        <section class="view" id="view-generator">
+          <div class="page-heading"><span class="page-icon">{ }</span><div><div class="eyebrow">AI CODE GENERATOR</div><h1>مولّد الأكواد</h1><p>اكتب وصفًا واضحًا وحدد اللغة المطلوبة.</p></div></div>
+          <div class="workspace">
+            <form class="tool-form" id="generatorForm">
+              <label for="codeLanguage">لغة البرمجة</label>
+              <select id="codeLanguage"><option>Python</option><option>JavaScript</option><option>TypeScript</option><option>HTML</option><option>CSS</option><option>Java</option><option>C++</option><option>SQL</option><option>PHP</option></select>
+              <label for="codeDescription">وصف الكود</label>
+              <textarea id="codeDescription" rows="5" maxlength="20000" placeholder="مثال: أنشئ دالة تتحقق من أن النص Palindrome..." required></textarea>
+              <button class="btn btn-primary" id="generateButton" type="submit">أنشئ الكود ✦</button>
+            </form>
+            <div class="result-head"><strong>النتيجة</strong></div>
+            <div class="ai-result" id="generatorResult" aria-live="polite">سيظهر الكود هنا بعد إنشائه.</div>
+          </div>
+        </section>
+
+        <section class="view" id="view-developer">
+          <div class="page-heading"><span class="page-icon">{ }</span><div><div class="eyebrow">DEVELOPER TOOLS</div><h1>أدوات المطور</h1><p>تنسيق JSON والتحقق منه أو ضغطه.</p></div></div>
+          <div class="workspace">
+            <div class="tool-form">
+              <label for="jsonInput">JSON المدخل</label>
+              <textarea class="code-input" id="jsonInput" rows="9" placeholder='{"name":"CodeBox","active":true}'></textarea>
+              <div class="button-row">
+                <button class="btn btn-primary" id="formatJson" type="button">تنسيق والتحقق</button>
+                <button class="btn btn-ghost" id="minifyJson" type="button">ضغط JSON</button>
+                <button class="btn btn-ghost" id="clearJson" type="button">مسح</button>
+              </div>
+              <p class="inline-status" id="jsonStatus" aria-live="polite"></p>
+              <label for="jsonOutput">النتيجة</label>
+              <textarea class="code-input" id="jsonOutput" rows="9" readonly placeholder="ستظهر النتيجة هنا..."></textarea>
+            </div>
+          </div>
+        </section>
+
+        <section class="view" id="view-python">
+          <div class="page-heading"><span class="page-icon">Py</span><div><div class="eyebrow">PYTHON INSPECTOR</div><h1>فاحص Python</h1><p>ملخص نصي أولي للكود، دون تشغيله.</p></div></div>
+          <div class="workspace">
+            <div class="tool-form">
+              <label for="pythonInput">كود Python</label>
+              <textarea class="code-input" id="pythonInput" rows="12" placeholder="الصق كود Python هنا..."></textarea>
+              <div class="button-row"><button class="btn btn-primary" id="inspectPython" type="button">فحص الكود</button><button class="btn btn-ghost" id="clearPython" type="button">مسح</button></div>
+              <div class="result-head"><strong>ملخص الكود</strong></div>
+              <div class="result-panel" id="pythonResult">الصق كود Python واضغط فحص الكود.</div>
+            </div>
+          </div>
+        </section>
+
+        <section class="view" id="view-text">
+          <div class="page-heading"><span class="page-icon">¶</span><div><div class="eyebrow">TEXT TOOLS</div><h1>أدوات النصوص</h1><p>إحصاءات سريعة وتحويل حالة الأحرف.</p></div></div>
+          <div class="workspace">
+            <div class="tool-form">
+              <label for="textInput">النص</label>
+              <textarea id="textInput" rows="9" placeholder="اكتب أو الصق النص هنا..."></textarea>
+              <div class="text-stats">
+                <div><strong id="charCount">0</strong><small>حرف</small></div>
+                <div><strong id="wordCount">0</strong><small>كلمة</small></div>
+                <div><strong id="lineCount">0</strong><small>سطر</small></div>
+              </div>
+              <div class="button-row">
+                <button class="btn btn-ghost" id="uppercaseText" type="button">أحرف كبيرة</button>
+                <button class="btn btn-ghost" id="lowercaseText" type="button">أحرف صغيرة</button>
+                <button class="btn btn-ghost" id="copyText" type="button">نسخ النص</button>
+                <button class="btn btn-ghost" id="clearText" type="button">مسح</button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="view" id="view-calculator">
+          <div class="page-heading"><span class="page-icon">±</span><div><div class="eyebrow">SAFE CALCULATOR</div><h1>الآلة الحاسبة</h1><p>عمليات حسابية أساسية دون تنفيذ تعبيرات برمجية.</p></div></div>
+          <div class="workspace calculator-workspace">
+            <div class="calculator-display"><small>RESULT</small><div id="calcDisplay">0</div></div>
+            <div class="calculator-grid">
+              <button class="calc-function" data-calc="clear" type="button">AC</button><button class="calc-function" data-calc="back" type="button">⌫</button><button class="calc-operator" data-calc="(" type="button">(</button><button class="calc-operator" data-calc=")" type="button">)</button>
+              <button data-calc="7" type="button">7</button><button data-calc="8" type="button">8</button><button data-calc="9" type="button">9</button><button class="calc-operator" data-calc="/" type="button">÷</button>
+              <button data-calc="4" type="button">4</button><button data-calc="5" type="button">5</button><button data-calc="6" type="button">6</button><button class="calc-operator" data-calc="*" type="button">×</button>
+              <button data-calc="1" type="button">1</button><button data-calc="2" type="button">2</button><button data-calc="3" type="button">3</button><button class="calc-operator" data-calc="-" type="button">−</button>
+              <button data-calc="0" type="button">0</button><button data-calc="." type="button">.</button><button class="calc-equals" data-calc="=" type="button">=</button><button class="calc-operator" data-calc="+" type="button">+</button>
+            </div>
+            <p class="inline-status" id="calcStatus" aria-live="polite"></p>
+          </div>
+        </section>
+
+        <section class="view" id="view-converter">
+          <div class="page-heading"><span class="page-icon">⇄</span><div><div class="eyebrow">UNIT CONVERTER</div><h1>محوّل الوحدات</h1><p>حوّل الطول والوزن ودرجات الحرارة.</p></div></div>
+          <div class="workspace">
+            <div class="tool-form">
+              <label for="convertCategory">نوع التحويل</label>
+              <select id="convertCategory"><option value="length">الطول</option><option value="weight">الوزن</option><option value="temperature">درجة الحرارة</option></select>
+              <label for="convertValue">القيمة</label>
+              <input id="convertValue" type="number" step="any" value="1">
+              <div class="two-fields">
+                <div><label for="convertFrom">من</label><select id="convertFrom"></select></div>
+                <div><label for="convertTo">إلى</label><select id="convertTo"></select></div>
+                <div><label>&nbsp;</label><button class="btn btn-primary" id="convertButton" type="button">تحويل</button></div>
+              </div>
+              <div class="conversion-result"><small>النتيجة</small><strong id="convertResult">—</strong></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="view" id="view-colors">
+          <div class="page-heading"><span class="page-icon">◉</span><div><div class="eyebrow">COLOR MIXER</div><h1>مزج الألوان</h1><p>اختر لونين واعرض المتوسط بينهما.</p></div></div>
+          <div class="workspace color-workspace">
+            <div class="tool-form">
+              <div class="two-fields">
+                <div><label for="colorOne">اللون الأول</label><input id="colorOne" class="color-picker" type="color" value="#00ff88"></div>
+                <div><label for="colorTwo">اللون الثاني</label><input id="colorTwo" class="color-picker" type="color" value="#2244aa"></div>
+              </div>
+              <div id="colorPreview" class="color-preview" aria-label="معاينة اللون الناتج"></div>
+              <div class="color-values"><div><small>HEX</small><strong id="hexValue">#</strong><button class="btn btn-ghost btn-small" data-copy-value="hexValue" type="button">نسخ</button></div><div><small>RGB</small><strong id="rgbValue">rgb()</strong><button class="btn btn-ghost btn-small" data-copy-value="rgbValue" type="button">نسخ</button></div></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="view" id="view-password">
+          <div class="page-heading"><span class="page-icon">⌑</span><div><div class="eyebrow">PASSWORD GENERATOR</div><h1>مولّد كلمات المرور</h1><p>أنشئ كلمة عشوائية باستخدام مولّد آمن.</p></div></div>
+          <div class="workspace password-workspace">
+            <div class="tool-form">
+              <label for="passwordLength">طول كلمة المرور: <span id="passwordLengthLabel">16</span></label>
+              <input id="passwordLength" type="range" min="8" max="128" value="16">
+              <label class="check-row" for="passwordSymbols"><input id="passwordSymbols" type="checkbox" checked> تضمين الرموز</label>
+              <button class="btn btn-primary" id="makePassword" type="button">إنشاء كلمة مرور</button>
+              <div class="password-output"><code id="passwordResult" aria-live="polite"></code><button class="btn btn-ghost btn-small" id="copyPassword" type="button">نسخ</button></div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <footer class="app-footer"><span class="footer-brand">CODEBOX PRO</span><span>أدوات عملية لمساحة عملك البرمجية.</span></footer>
+    </main>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
